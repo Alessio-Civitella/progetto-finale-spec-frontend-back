@@ -300,9 +300,7 @@ const loadPromises = resourceTypes.map(type => {
             );
         }
         
-        res.json(filteredItems.map(
-            ({id, createdAt, updatedAt, title, category}) => ({id, createdAt, updatedAt, title, category})
-        ));
+        res.json(filteredItems);
     });
 
     // Load data for this resource type

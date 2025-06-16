@@ -25,6 +25,9 @@ app.use(cors({
 }));
 app.use(express.json({ limit: 'Infinity' }));
 
+// Disable etag headers to prevent 304 responses without body for API endpoints
+app.set('etag', false);
+
 // **CACHE in memoria** for each resource type
 const cache = {};
 
